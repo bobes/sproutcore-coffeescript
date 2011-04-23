@@ -13,8 +13,10 @@ module SC
         raise "Cannot compile #{entry.source_path} because coffeescript is not installed. Please install coffeescript to continue."
       end
 
-      content = readlines(entry.source_path)
-      js = CoffeeScript.compile(content)
+      coffee = readlines(entry.source_path)
+      js = CoffeeScript.compile(coffee)
+      js = rewrite_inline_code(js)
+      js = handle_debug_code(js)
       writeline dst_path, js
     end
   end

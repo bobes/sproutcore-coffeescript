@@ -1,0 +1,8 @@
+== 0.1.1
+
+- sc_super is now replaced with arguments.callee.base.apply same as in javascript
+
+
+== 0.1.0
+
+- coffeescript files get translated to javascript
