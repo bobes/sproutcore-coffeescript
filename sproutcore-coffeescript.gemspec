@@ -8,7 +8,7 @@ Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["Vladimír Bobeš Tužinský"]
   s.email       = ["vladimir.tuzinsky@gmail.com"]
-  s.homepage    = ""
+  s.homepage    = "https://github.com/bobes/sproutcore-coffeescript"
   s.summary     = %q{SproutCore + CoffeeScript in love}
   s.description = %q{Adds support for CoffeeScript to SproutCore}
 
