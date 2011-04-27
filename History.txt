@@ -1,3 +1,8 @@
+== 0.1.2
+
+- sc_require '...' is now matched even without parentheses
+
+
 == 0.1.1
 
 - sc_super is now replaced with arguments.callee.base.apply same as in javascript
