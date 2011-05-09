@@ -17,7 +17,7 @@ module SC
       js = CoffeeScript.compile(coffee)
       js = rewrite_inline_code(js)
       js = handle_debug_code(js)
-      writeline dst_path, js
+      writeline dst_path, ";#{js}"
     end
   end
 end
