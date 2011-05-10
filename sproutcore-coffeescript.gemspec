@@ -4,7 +4,7 @@ require "sproutcore-coffeescript/version"
 
 Gem::Specification.new do |s|
   s.name        = "sproutcore-coffeescript"
-  s.version     = Sproutcore::Coffeescript::VERSION
+  s.version     = Sproutcore::CoffeeScript::VERSION
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["Vladimír Bobeš Tužinský"]
   s.email       = ["vladimir.tuzinsky@gmail.com"]

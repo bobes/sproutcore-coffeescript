@@ -1,5 +1,5 @@
 module Sproutcore
-  module Coffeescript
+  module CoffeeScript
     VERSION = "0.1.3"
   end
 end

@@ -1,6 +1,6 @@
 module SC
 
-  class Builder::Coffeescript < Builder::JavaScript
+  class Builder::CoffeeScript < Builder::JavaScript
 
     def self.build(entry, dst_path)
       new(entry).build(dst_path)
@@ -14,7 +14,7 @@ module SC
       end
 
       coffee = readlines(entry.source_path)
-      js = CoffeeScript.compile(coffee)
+      js = ::CoffeeScript.compile(coffee)
       js = rewrite_inline_code(js)
       js = handle_debug_code(js)
       writeline dst_path, ";#{js}"
