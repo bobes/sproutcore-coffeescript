@@ -1,5 +1,14 @@
 namespace :manifest do
 
+  # here we're adding behaviour to an existing task
+  # we need to 'unhide' *.coffee entries
+  task :hide_buildfiles do |task, env|
+    manifest = env[:manifest]
+    manifest.entries(:hidden => true).each do |entry|
+      entry.hidden = false if entry[:ext] == "coffee"
+    end
+  end
+
   namespace :prepare_build_tasks do
 
     desc "scans for coffeescript files, annotates them and prepares combined entries for each output target"
@@ -7,7 +16,7 @@ namespace :manifest do
       manifest = env[:manifest]
       config   = CONFIG
 
-      entries = manifest.entries(:hidden => true).select do |e|
+      entries = manifest.entries.select do |e|
         e.original? && e[:ext] == "coffee"
       end
 
