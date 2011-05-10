@@ -1,3 +1,10 @@
+== 0.1.4
+
+- FIX: coffeescript test files are not loaded into application anymore
+- coffeescript generated javascript are now prefixed with semicolon, because Sproutcore sometimes doesn't put semicolons at the end of javascript files and coffeescript generated javascript is wrapped in parentheses, so joining such files results in unexpected behaviour
+- coffeescript builder now reuses all functionality of javascript builder
+
+
 == 0.1.3
 
 - sc_require '...' is now matched even without parentheses
