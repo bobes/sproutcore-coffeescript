@@ -1,3 +1,8 @@
+== 0.1.5
+
+- Moved files to sproutcore-coffeescript directory, so the files never get required by sproutcore itself instead of the original sproutcore files
+
+
 == 0.1.4
 
 - FIX: coffeescript test files are not loaded into application anymore
