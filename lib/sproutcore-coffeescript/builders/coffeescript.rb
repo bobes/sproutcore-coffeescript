@@ -7,7 +7,7 @@ module SC
     end
 
     def readlines(src_path)
-      ";" + ::CoffeeScript.compile(super)
+      ";" + ::CoffeeScript.compile(super, :bare => true)
     rescue NameError
       begin
         require "coffee-script"
